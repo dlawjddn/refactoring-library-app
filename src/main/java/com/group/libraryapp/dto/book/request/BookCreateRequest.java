@@ -4,7 +4,10 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
 @Getter
-@RequiredArgsConstructor
 public class BookCreateRequest {
-    private final String name;
+    private String name;
+
+    public BookCreateRequest(String name) {
+        this.name = name;
+    }
 }
