@@ -7,6 +7,7 @@ import com.group.libraryapp.dto.book.request.BookReturnRequest;
 import com.group.libraryapp.service.book.BookService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,7 +23,7 @@ public class BookController {
     public void loanBook(@RequestBody BookLoanRequest request){
         bookService.loanBook(request);
     }
-    @PostMapping("/book/return")
+    @PutMapping("/book/return")
     public void returnBook(@RequestBody BookReturnRequest request){
         bookService.returnBook(request);
     }
